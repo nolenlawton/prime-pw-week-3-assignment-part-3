@@ -33,12 +33,12 @@ console.log(supplyChanges);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
-for(i=0; i<supplyChanges.length; i++){
+for(let i=0; i<supplyChanges.length; i++){
     if(supplyChanges[i] > 0){
         console.log('Added ' + supplyChanges[i] + ' parts.');
     }
     else if(supplyChanges[i] < 0){
-        console.log('Removed ' + -supplyChanges[i] + ' parts.');
+        console.log('Removed ' + -supplyChanges[i] + ' parts.'); // added negative before 'supplyChanges[i]' because 'removed -6 parts' is repetitive
     }
     else{
         console.log('No Change.');
@@ -81,11 +81,10 @@ for(number of supplyChanges){
 console.log('9. Filling boxes with a "while" loop');
 
 let totalParts = 572
-let partsForBox = 7
 let fullBox = 0
 
-while(totalParts > partsForBox){
-    totalParts -= partsForBox;
+while(totalParts > 7){
+    totalParts -= 7;
     fullBox++
 }
 
